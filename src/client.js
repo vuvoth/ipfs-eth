@@ -37,25 +37,25 @@ async function deployContract(args, config) {
   }).send(config)
 }
 
-async function getWithIpfs() {
+async function getNameWithIpfs() {
   // get ipfs hash 
   hash = await contract.methods.getName().call(TxConfig)
 
   return await getData(hash) // decode and return 
 }
 
-async function setWithIpfs(params) {
+async function setNameWithIpfs(params) {
   // add data to ipfs 
   hash = await addData(params)
   // update name
   await contract.methods.setName(hash).send(TxConfig);
 }
 
-async function getNaive() {
+async function getNameHash() {
   return await contract.methods.getName().call(TxConfig)
 }
 
-async function setNaive(data) {
+async function setNameHash(data) {
   await contract.methods.setName(data).send(TxConfig);
 }
 
@@ -66,9 +66,9 @@ async function main() {
   
 }
 
-window.getWithIpfs = getWithIpfs 
-window.setWithIpfs = setWithIpfs 
-window.getNaive = getNaive 
-window.setNaive = setNaive
+window.getNameWithIpfs = getNameWithIpfs 
+window.setNameWithIpfs = setNameWithIpfs 
+window.getNameHash = getNameHash 
+window.setNameHash = setNameHash
 
 main()
