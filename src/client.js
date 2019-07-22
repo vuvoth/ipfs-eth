@@ -11,9 +11,9 @@ const TxConfig = {
   gas: 200000000
 }
 
-const artifact = require('../build/contracts/BalanceIpfs.json')
+const artifact = require('../build/contracts/NameIpfs.json')
 
-var conttract; 
+var contract; 
 
 
 var ipfs = Ipfs('localhost', '5001', { protocol: 'http' })
