@@ -9,7 +9,8 @@ npm install webpack webpack-cli -g
 npm install ganache-cli -g
 ```
 
-Install go-ipfs
+## Install go-ipfs
+
 `cd` to project folder
 
 ```bash
@@ -38,6 +39,7 @@ ganache-cli -h 0.0.0.0 -p 7777 -d -l 200000000 -g
 ## Run Ipfs
 
 In terminal 2
+
 Run ipfs daemon
 
 ```bash
@@ -52,5 +54,6 @@ In terminal 3
 npm run server
 ```
 
+Open page at <http://localhost:3000/> and execute
 
-Open page at <http://localhost:3000/>
+![Example](./images/example.png)
